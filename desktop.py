@@ -13,11 +13,7 @@ class Frame1(tk.Frame):
             )
 
         self.lab_b = tk.Label(
-            self, width=43, text='Введите значение b:', bg='white', height=1
-            )
-
-        self.lab_c = tk.Label(
-            self, width=43, text='Введите значение c:', bg='white', height=1
+            self, width=43, text='Введите значение b и c:', bg='white', height=1
             )
 
         self.ent_a = tk.Entry(self, width=50, bg='gray')
@@ -33,8 +29,6 @@ class Frame1(tk.Frame):
         self.lab_b.pack()
 
         self.ent_b.pack()
-
-        self.lab_c.pack()
 
         self.ent_c.pack()
 
