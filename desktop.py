@@ -72,11 +72,8 @@ class Frame2(Frame1):
 
     def vichisl(self):
         """Функция для вычислений"""
-        self.lab_1['text'] = ''
         self.lab_2['text'] = ''
-        self.lab_text_1['text'] = ''
         self.lab_text_2['text'] = ''
-        self.lab_text_3['text'] = ''
         a = int(self.ent_a.get())
         b = int(self.ent_b.get())
         c = int(self.ent_c.get())
