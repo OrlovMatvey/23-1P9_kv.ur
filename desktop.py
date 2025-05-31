@@ -8,9 +8,16 @@ class Frame1(tk.Frame):
     def __init__(self):
         super().__init__()
 
-        self.lab_abc = tk.Label(
-            self, width=43, text='Введите значения a, b и с:',
-            bg='white', height=1
+        self.lab_a = tk.Label(
+            self, width=43, text='Введите значение a:', bg='white', height=1
+            )
+
+        self.lab_b = tk.Label(
+            self, width=43, text='Введите значение b:', bg='white', height=1
+            )
+
+        self.lab_c = tk.Label(
+            self, width=43, text='Введите значение c:', bg='white', height=1
             )
 
         self.ent_a = tk.Entry(self, width=50, bg='gray')
@@ -19,11 +26,15 @@ class Frame1(tk.Frame):
 
         self.ent_c = tk.Entry(self, width=50, bg='gray')
 
-        self.lab_abc.pack()
+        self.lab_a.pack()
 
         self.ent_a.pack()
 
+        self.lab_b.pack()
+
         self.ent_b.pack()
+
+        self.lab_c.pack()
 
         self.ent_c.pack()
 
@@ -38,8 +49,6 @@ class Frame2(Frame1):
         self.lab_1 = tk.Label(self, width=80, bg='gray')
 
         self.lab_2 = tk.Label(self, width=80, bg='gray')
-
-        self.lab_3 = tk.Label(self, width=80, bg='gray')
 
         self.lab_text_1 = tk.Label(self, width=80, bg='white')
 
@@ -66,13 +75,10 @@ class Frame2(Frame1):
 
         self.lab_2.pack()
 
-        self.lab_3.pack()
-
     def vichisl(self):
         """Функция для вычислений"""
         self.lab_1['text'] = ''
         self.lab_2['text'] = ''
-        self.lab_3['text'] = ''
         self.lab_text_1['text'] = ''
         self.lab_text_2['text'] = ''
         self.lab_text_3['text'] = ''
@@ -85,8 +91,7 @@ class Frame2(Frame1):
             self.lab_text_1['text'] = "Дискриминант:"
             self.lab_1['text'] = otvet[1]
             self.lab_text_2['text'] = "Корни:"
-            self.lab_2['text'] = f'x1={otvet[2]}'
-            self.lab_3['text'] = f'x2={otvet[3]}'
+            self.lab_2['text'] = f'x1={otvet[2]}, x2={otvet[3]}'
         elif len(otvet) == 3:
             self.lab_text_1['text'] = "Дискриминант:"
             self.lab_1['text'] = otvet[1]
